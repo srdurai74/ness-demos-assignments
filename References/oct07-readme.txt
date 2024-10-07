@@ -1,3 +1,7 @@
+References:
+https://devhints.io/xpath
+https://flukeout.github.io/
+
 Selenium
    - IDE
        - record and playback
