@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.service import Service
 
 def test_login():
 
-    base_url = 'https://opensource-demo.orangehrmlive.com/auth/login'
+    base_url = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
     driver = webdriver.Chrome()
 
     time.sleep(2)
@@ -30,6 +30,15 @@ def test_login():
 
     time.sleep(2)
     assert error_msg_field.text == expected_text
+
+
+# write code to assert page title
+    time.sleep(2)
+    assert driver.title == 'OrangeHRM'
+    # write code to check if a webelement is present or not
+    time.sleep(2)
+
+
 
 
     time.sleep(5)
