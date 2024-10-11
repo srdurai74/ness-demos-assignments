@@ -3,5 +3,6 @@ import time
 
 class Util:
 
-    def time_delay(self,wait_period):
+    @staticmethod
+    def time_delay(wait_period):
         time.sleep(wait_period)

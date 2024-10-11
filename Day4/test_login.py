@@ -20,17 +20,17 @@ def test_login():
     driver.get(BaseConfig.BASE_URL)
     driver.implicitly_wait(BaseConfig.DEFAULT_TIMEOUT)
     driver.maximize_window()
-    util = Util()
-    util.time_delay(3)
+    # util = Util()
+    Util.time_delay(3)
 
     loginpo = LoginPage(driver)
-    util.time_delay(3)
+    Util.time_delay(3)
     # dashboardpo = DashboardPage(driver)
     dashboardpo = loginpo.check_valid_login(DataConfig.VALID_USER_NAME,DataConfig.VALID_PASSWORD)
-    util.time_delay(3)
+    Util.time_delay(3)
     print('here :'+ dashboardpo.get_dashboard_msg())
     assert dashboardpo.get_dashboard_msg() == 'Dashboard'
 
-    util.time_delay(5)
+    Util.time_delay(3)
 
     driver.quit()
